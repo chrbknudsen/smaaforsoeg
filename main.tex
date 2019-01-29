@@ -1,0 +1,57 @@
+\documentclass[a5paper,20pt]{book}
+% Det er her vi sætter margener. Pakken geometry giver også adgang til andet.
+\usepackage[a5paper, inner=10mm, outer=10mm, top=10mm, bottom=10mm]{geometry}
+% Nødvendigt for at få chemfig til at virke.
+\usepackage{tikz}
+% Sætter de kemiske formler
+\usepackage{chemformula}
+% Sikrer at vi kan bruge danske specialtegn
+\usepackage[utf8]{inputenc}
+% Sætter strukturerne
+\usepackage{mol2chemfig}
+\usepackage{chemfig}
+% Font-encoding, bl.a. det tyske dobbelt-s
+\usepackage[T1]{fontenc}
+
+
+\usepackage{titlesec}
+
+% Hvor vi selv styrer ting
+\usepackage{dshk}
+
+\titleformat{\chapter}{\normalfont\huge}{}{20pt}{\huge\bf}
+\titlespacing{\chapter}{0pc}{1.5ex plus .1ex minus .2ex}{1pc}
+\titlespacing{\chapter}{0pc}{1.5ex plus .1ex minus .2ex}{1pc}
+
+
+\begin{document}
+Skriftstørrelsen skal være 11.
+Hvilken font? Vistnok Times Roman-font
+Vi skal nok kigge på margener også.
+
+Pakken chemformula giver adgang til:
+\ch{3 H2O}
+
+\ch{1/2 H2O}
+
+\ch{AgCl2-}
+
+\ch{H2_{(aq)}}
+
+Se gerne https://tex.stackexchange.com/questions/384610/how-to-write-a-chemical-formula
+
+Vi skal have separat sidenummerering på de første sider med små romertal. Og ingen sidenummerering på den allerførste side.
+\pagenumbering{gobble}
+\include{titelblad}
+\pagenumbering{roman}
+\include{kolofon}
+\include{forord}
+\pagenumbering{arabic}
+\tableofcontents
+\include{61_1_34}
+\include{87_5_46}
+\include{87_2_18}
+\include{85_5_46}
+\include{86_8_37}
+\include{86_3_40}
+\end{document}
