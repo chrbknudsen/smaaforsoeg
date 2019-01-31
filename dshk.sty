@@ -1,6 +1,22 @@
+% Her piller vi ved den style siderne skal have.
+% Først fjerner vi "Chapter #" fra kapitlerne.
+% Dernæst kigger vi på headers og footers.
+\titleformat{\chapter}[display]
+    {\normalfont\bfseries}{}{0pt}{\Large}
+  \newpagestyle{mystyle}{
+    \sethead[][][]{}{}{}
+    \setfoot[\thepage][][]{}{\thepage}{}
+  }
+\pagestyle{mystyle}
+
+
+% I stedet for at definere hvert kaptitel som kapitel, gør vi det her, så vi let
+% kan ændre på ting.
 \newcommand\emne[1]{
    \chapter{#1}
 }
+
+% Måden vi ønsker at få formatteret referencen til Dansk Kemi.
 
 \newcommand\danskkemi[1]{
   \begin{center}
@@ -9,6 +25,7 @@
   \end{center}
 }
 
+% Der er deloverskrifter i de fleste forsøg. Formatteringen defineres her.
 \newcommand\deloverskrift[1]{
   \textbf{#1}
 }

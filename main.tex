@@ -12,19 +12,38 @@
 \usepackage{chemfig}
 % Font-encoding, bl.a. det tyske dobbelt-s
 \usepackage[T1]{fontenc}
-
-
+% for at kunne inkludere pdf'ere
+\usepackage{pdfpages}
+% For at kunne styre sidelayhout og den slags.
 \usepackage{titlesec}
+
+\usepackage{longtable}
 
 % Hvor vi selv styrer ting
 \usepackage{dshk}
 
-\titleformat{\chapter}{\normalfont\huge}{}{20pt}{\huge\bf}
-\titlespacing{\chapter}{0pc}{1.5ex plus .1ex minus .2ex}{1pc}
-\titlespacing{\chapter}{0pc}{1.5ex plus .1ex minus .2ex}{1pc}
-
 
 \begin{document}
+
+\pagenumbering{gobble}
+\include{titelblad}
+\pagenumbering{roman}
+\include{kolofon}
+\include{forord}
+\pagenumbering{arabic}
+\tableofcontents
+\include{dele/61_1}
+\include{87_5_46}
+\include{87_2_18}
+
+\include{dele/85_5}
+
+\include{86_8_37}
+\include{86_3_40}
+
+
+\include{dele/62_3_a}
+\chapter{Diverse administrativt}
 Skriftstørrelsen skal være 11.
 Hvilken font? Vistnok Times Roman-font
 Vi skal nok kigge på margener også.
@@ -41,17 +60,7 @@ Pakken chemformula giver adgang til:
 Se gerne https://tex.stackexchange.com/questions/384610/how-to-write-a-chemical-formula
 
 Vi skal have separat sidenummerering på de første sider med små romertal. Og ingen sidenummerering på den allerførste side.
-\pagenumbering{gobble}
-\include{titelblad}
-\pagenumbering{roman}
-\include{kolofon}
-\include{forord}
-\pagenumbering{arabic}
-\tableofcontents
-\include{61_1_34}
-\include{87_5_46}
-\include{87_2_18}
-\include{85_5_46}
-\include{86_8_37}
-\include{86_3_40}
+
+\include{oversigt}
+
 \end{document}
