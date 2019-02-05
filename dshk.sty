@@ -1,3 +1,7 @@
+% Gider vi overhovedet se på den indentering LaTeX som standard tilføjer.
+% Her fjerner vi den i hvertfald.
+\setlength{\parindent}{0cm}
+
 % Her piller vi ved den style siderne skal have.
 % Først fjerner vi "Chapter #" fra kapitlerne.
 % Dernæst kigger vi på headers og footers.
@@ -17,11 +21,18 @@
 }
 
 % Måden vi ønsker at få formatteret referencen til Dansk Kemi.
-
 \newcommand\danskkemi[1]{
   \begin{center}
     \itshape
     #1
+  \end{center}
+}
+
+% Måden hvorpå vi ønsker at få formatteret forfatternavnet
+\newcommand\forfatter[1]{
+  \begin{center}
+    \itshape
+      #1
   \end{center}
 }
 
